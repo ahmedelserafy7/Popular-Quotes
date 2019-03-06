@@ -1,0 +1,6 @@
+framework module Pods_Popular_QuotesUITests {
+  umbrella header "Pods-Popular QuotesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
