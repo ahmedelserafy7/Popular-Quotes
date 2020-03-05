@@ -5,7 +5,7 @@ DEPENDENCIES:
   - CLTypingLabel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - CLTypingLabel
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2b64419d229d4d5c5aafe6c4550a5ec35b4a45df
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

@@ -8,15 +8,6 @@
 
 import UIKit
 
-class Popular: NSObject {
-    var quote: String?
-    var popularImage: String?
-    init(_ quote: String, _ popularImage: String) {
-        self.quote = quote
-        self.popularImage = popularImage
-    }
-}
-
 class PopularQuotesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     fileprivate let pageCellId = "pageCellId"
@@ -98,7 +89,7 @@ class PopularQuotesViewController: UIViewController, UICollectionViewDelegate, U
         cell.backgroundColor = pageColors[indexPath.item]
         
         guard let text = popArr[indexPath.item].quote else { return UICollectionViewCell() }
-        cell.quoteLabel.attributedText = NSAttributedString(string: text, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16)])
+        cell.quoteLabel.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)])
         
         guard let popImage = popArr[indexPath.item].popularImage else { return UICollectionViewCell() }
         cell.popularImageView.image = UIImage(named: popImage)
@@ -110,7 +101,7 @@ class PopularQuotesViewController: UIViewController, UICollectionViewDelegate, U
     
     func estimatedSizeOfText(_ text: String)-> CGRect {
         let size = CGSize(width: 250, height: 1000)
-        return NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16)], context: nil)
+        return NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)], context: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

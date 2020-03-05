@@ -41,7 +41,7 @@ class QuoteViewCell: UICollectionViewCell {
     }()
     
     let bubbleView: UIImageView = {
-        let iv = UIImageView(image: #imageLiteral(resourceName: "bubble").withRenderingMode(.alwaysTemplate).resizableImage(withCapInsets: UIEdgeInsetsMake(22, 26, 22, 26)))
+        let iv = UIImageView(image: #imageLiteral(resourceName: "bubble").withRenderingMode(.alwaysTemplate).resizableImage(withCapInsets: UIEdgeInsets(top: 22, left: 26, bottom: 22, right: 26)))
         iv.tintColor = UIColor(white: 0.95, alpha: 1)
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
